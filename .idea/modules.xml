@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dotdash-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/dotdash-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dotdash-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/dotdash-tests_main.iml" group="dotdash-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dotdash-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/dotdash-tests_test.iml" group="dotdash-tests" />
+    </modules>
+  </component>
+</project>
