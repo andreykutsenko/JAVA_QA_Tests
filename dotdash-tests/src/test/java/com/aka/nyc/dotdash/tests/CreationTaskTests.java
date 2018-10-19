@@ -1,9 +1,9 @@
 package com.aka.nyc.dotdash.tests;
 
-import com.aka.nyc.dotdash.Model.Categories;
-import com.aka.nyc.dotdash.Model.CategoryData;
-import com.aka.nyc.dotdash.Model.TaskData;
-import com.aka.nyc.dotdash.Model.Tasks;
+import com.aka.nyc.dotdash.model.Categories;
+import com.aka.nyc.dotdash.model.CategoryData;
+import com.aka.nyc.dotdash.model.TaskData;
+import com.aka.nyc.dotdash.model.Tasks;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -28,6 +28,13 @@ public class CreationTaskTests extends TestBase {
     Tasks after = app.Rest().getTasks();
 
     assertThat((after.size()), equalTo(before.size() + 1));
+
+    for (TaskData task : after) {
+      if (task.getCategoryId().trim().length() == 0) {  //Tasks without categories
+        System.out.println("ID: " + task.getId() + "; Task name: " + task.getTaskName());
+      }
+    }
+
 
   }
 }

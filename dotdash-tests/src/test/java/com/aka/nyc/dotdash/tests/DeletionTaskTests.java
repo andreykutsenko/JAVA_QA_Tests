@@ -1,7 +1,7 @@
 package com.aka.nyc.dotdash.tests;
 
-import com.aka.nyc.dotdash.Model.TaskData;
-import com.aka.nyc.dotdash.Model.Tasks;
+import com.aka.nyc.dotdash.model.TaskData;
+import com.aka.nyc.dotdash.model.Tasks;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

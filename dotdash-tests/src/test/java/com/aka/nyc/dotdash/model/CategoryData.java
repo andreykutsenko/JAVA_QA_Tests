@@ -1,4 +1,4 @@
-package com.aka.nyc.dotdash.Model;
+package com.aka.nyc.dotdash.model;
 
 import java.util.Objects;
 

@@ -1,8 +1,8 @@
 package com.aka.nyc.dotdash.appmanager;
 
-import com.aka.nyc.dotdash.Model.Categories;
-import com.aka.nyc.dotdash.Model.CategoryData;
-import com.aka.nyc.dotdash.Model.TaskData;
+import com.aka.nyc.dotdash.model.Categories;
+import com.aka.nyc.dotdash.model.CategoryData;
+import com.aka.nyc.dotdash.model.TaskData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;

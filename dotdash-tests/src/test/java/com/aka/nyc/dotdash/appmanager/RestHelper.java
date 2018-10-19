@@ -1,6 +1,6 @@
 package com.aka.nyc.dotdash.appmanager;
 
-import com.aka.nyc.dotdash.Model.Tasks;
+import com.aka.nyc.dotdash.model.Tasks;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
