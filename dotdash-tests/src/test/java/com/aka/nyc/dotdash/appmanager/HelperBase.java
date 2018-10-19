@@ -1,11 +1,6 @@
 package com.aka.nyc.dotdash.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-
-import java.io.File;
+import org.openqa.selenium.*;
 
 public class HelperBase {
 
@@ -21,6 +16,10 @@ public class HelperBase {
     wd.findElement(locator).click();
   }
 
+  public void submitCreation() {
+    click(By.xpath("//input[@value='Add']"));
+  }
+
   protected void type(By locator, String text) {
     click(locator);
     if (text != null) {
@@ -32,27 +31,16 @@ public class HelperBase {
     }
   }
 
-  protected void attach(By locator, File file) {
-    if (file != null) {
-      wd.findElement(locator).sendKeys(file.getAbsolutePath());
-    }
+  public void selectTaskById(int id) {
+    wd.findElement(By.cssSelector("input[name='todo[" + id + "]']")).click();
   }
 
-  public boolean isAlertPresent() {
-    try {
-      wd.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
+  public void initTaskModificationById(int id) {
+    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
 
-  protected boolean isElementPresent(By locator) {
-    try {
-      wd.findElement(locator);
-      return true;
-    } catch (NoSuchElementException ex) {
-      return false;
-    }
+  public void submitModification() {
+    click(By.name("submit"));
   }
+
 }

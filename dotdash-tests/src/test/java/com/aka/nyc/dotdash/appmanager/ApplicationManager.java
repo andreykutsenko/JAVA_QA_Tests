@@ -21,6 +21,8 @@ public class ApplicationManager {
 
   private String browser;
   private NavigationHelper navigationHelper;
+  private TaskHelper taskHelper;
+  private RestHelper restHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -67,6 +69,20 @@ public class ApplicationManager {
       navigationHelper = new NavigationHelper(this);
     }
     return navigationHelper;
+  }
+
+  public TaskHelper task() {
+    if (taskHelper == null) {
+      taskHelper = new TaskHelper(this);
+    }
+    return taskHelper;
+  }
+
+  public RestHelper Rest() {
+    if (restHelper == null) {
+      restHelper = new RestHelper(this);
+    }
+    return restHelper;
   }
 
 }
